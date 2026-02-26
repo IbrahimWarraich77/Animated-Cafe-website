@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Cafe | Premium Coffee</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+body{background:#111;color:#fff;overflow-x:hidden;}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+header h1{color:orange;}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:#fff;
+transition:0.3s;
+}
+
+nav a:hover{color:orange;}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+}
+
+.hero h2{
+font-size:60px;
+animation:fadeDown 1.5s ease forwards;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+animation:fadeUp 1.5s ease forwards;
+}
+
+.hero button{
+padding:12px 30px;
+background:orange;
+border:none;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#fff;
+color:#000;
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{padding:100px 80px;}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:orange;
+}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.product{
+background:#222;
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:0.4s;
+}
+
+.product img{
+width:100%;
+border-radius:10px;
+}
+
+.product:hover{
+transform:translateY(-15px);
+background:#333;
+}
+
+/* PRICING */
+.pricing{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.price-card{
+background:#222;
+padding:40px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.price-card:hover{
+transform:scale(1.05);
+background:orange;
+color:#000;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover fixed;
+text-align:center;
+}
+
+.testimonial p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+}
+
+/* BOOKING */
+.booking form{
+display:flex;
+flex-direction:column;
+max-width:400px;
+margin:auto;
+}
+
+.booking input{
+margin:10px 0;
+padding:12px;
+border:none;
+}
+
+.booking button{
+padding:12px;
+background:orange;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-50px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(50px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>☕ Dream Cafe</h1>
+<nav>
+<a href="#products">Products</a>
+<a href="#pricing">Pricing</a>
+<a href="#booking">Reservation</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h2>Experience Premium Coffee</h2>
+<p>Luxury taste crafted for coffee lovers</p>
+<button onclick="alert('Reservation Opened!')">Book a Table</button>
+</div>
+</section>
+
+<section id="products">
+<h2 class="section-title">Our Signature Coffee</h2>
+<div class="products">
+<div class="product">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<h3>Espresso</h3>
+<p>Rich and bold flavor</p>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<h3>Latte</h3>
+<p>Smooth creamy delight</p>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096">
+<h3>Mocha</h3>
+<p>Chocolate infused perfection</p>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<h2 class="section-title">Pricing Plans</h2>
+<div class="pricing">
+<div class="price-card">
+<h3>Basic</h3>
+<h2>$10</h2>
+<p>1 Coffee + Snack</p>
+</div>
+<div class="price-card">
+<h3>Premium</h3>
+<h2>$25</h2>
+<p>Unlimited Coffee</p>
+</div>
+<div class="price-card">
+<h3>VIP</h3>
+<h2>$50</h2>
+<p>Private Lounge + Unlimited</p>
+</div>
+</div>
+</section>
+
+<section class="testimonial">
+<h2 class="section-title">What Clients Say</h2>
+<p>"The best coffee experience I've ever had. Premium ambiance and perfect taste!"</p>
+</section>
+
+<section id="booking" class="booking">
+<h2 class="section-title">Reserve Your Table</h2>
+<form onsubmit="event.preventDefault(); alert('Table Reserved Successfully!');">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="date" required>
+<button>Reserve Now</button>
+</form>
+</section>
+
+<footer id="contact">
+<p>© 2026 Dream Cafe Business | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
